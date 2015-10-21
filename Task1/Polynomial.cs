@@ -127,8 +127,12 @@ namespace Task1
             else
             {
                 for (int i = 0; i < p1.Length; i++)
-                    p2[i] -= p1[i];
-                return p2;
+                    p1[i] -= p2[i];
+                for (int i = p1.Length; i < p2.Length; i++)
+                {
+                    p1.AddItem(-p2[i]);
+                }
+                return p1;
             }
         }
 
